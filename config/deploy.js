@@ -25,9 +25,7 @@ module.exports = function(deployTarget) {
     };
 
     ENV.redis = {
-      keyPrefix: 'ember-cli-deploy-example-ember:index',
       revisionKey: '__development__',
-      allowOverwrite: true,
       host: 'localhost', // this can be omitted because it is the default
       port: 6379, // this can be omitted because it is the default
       distDir: function(context) {
@@ -41,6 +39,7 @@ module.exports = function(deployTarget) {
       accessKeyId: process.env.AWS_ACCESS_KEY_ID,
       secretAccessKey: process.env.AWS_SECRET_ACCESS_KEY,
       bucket: process.env.S3_BUCKET,
+      region: process.env.S3_REGION,
     };
 
     ENV.redis.url = process.env.REDIS_URL;
