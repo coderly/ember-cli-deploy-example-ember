@@ -26,6 +26,7 @@ module.exports = function(deployTarget) {
 
     ENV.redis = {
       revisionKey: '__development__',
+      allowOverwrite: true,
       host: 'localhost', // this can be omitted because it is the default
       port: 6379, // this can be omitted because it is the default
       distDir: function(context) {
